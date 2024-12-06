@@ -1,0 +1,22 @@
+<?php
+// Recipient email
+$to = "praveenpandip8@gmail.com";
+
+// Email subject
+$subject = "Test Email Without SMTP";
+
+// Email body
+$message = "This is a test email sent using the PHP mail() function.";
+
+// Headers
+$headers = "From: Your Name <admin@kingmakersiasacademy.com>\r\n";
+$headers .= "Reply-To: admin@kingmakersiasacademy.com\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+// Send email
+if (mail($to, $subject, $message, $headers)) {
+    echo "Email sent successfully!";
+} else {
+    echo "Failed to send email.";
+}
+?>
